@@ -90,5 +90,4 @@ jestli to hraješ:
 
 ---
 
-**enjoy the chaos lol**
 **neberte to readme vazne delalo to chatko me uz jebe na hlavu**
