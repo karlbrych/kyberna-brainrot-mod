@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "test-mod:voloda_block"
+  ],
+  "result": {
+    "count": 8,
+    "id": "test-mod:cernejzmrd"
+  }
+}

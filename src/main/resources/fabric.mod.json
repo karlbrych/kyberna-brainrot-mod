@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "test-mod",
+	"version": "${version}",
+	"name": "test-mod",
+	"description": "Testing Mod",
+	"authors": [
+		"karlbrych"
+	],
+	"contact": {
+		"homepage": "https://kajabrych.cz/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/test-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"github.karlbrych.Testmod"
+		],
+		"fabric-datagen": [
+			"github.karlbrych.TestmodDataGenerator"
+		],
+		"client": [
+			"github.karlbrych.TestmodClient"
+		]
+	},
+	"mixins": [
+		"test-mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.5",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
