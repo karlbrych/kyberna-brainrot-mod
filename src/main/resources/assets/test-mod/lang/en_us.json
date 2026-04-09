@@ -8,5 +8,8 @@
   "item.test-mod.nand_gate": "NAND Logická brána",
   "item.test-mod.nor_gate": "NOR Logická brána",
   "itemgroup.test-mod.kyberna_brainrot": "KYBERNA BRAINROT",
-  "item.test-mod.dan_block": "Borek"
+  "item.test-mod.dan_block": "Borek",
+  "item.test-mod.netanyahu": "Bibi Netanyahu",
+  "item.test-mod.trump": "Donald Trump"
+  
 }

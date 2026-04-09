@@ -27,6 +27,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.VOLODA_BLOCK);
                         entries.add(ModItems.NEGR);
                         entries.add(DAN_BLOCK);
+                        entries.add(ModItems.NETANYAHU);
+                        entries.add(ModItems.TRUMP);
                     })
                     .build()
     );

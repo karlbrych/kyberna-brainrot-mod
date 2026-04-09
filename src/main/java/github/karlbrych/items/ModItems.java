@@ -21,7 +21,8 @@ public class ModItems {
 
     public static Item NEGR;
     public static Item KAKAL_POISON;
-
+    public static Item NETANYAHU;
+    public static Item TRUMP;
     private static final ConsumableComponent KAKAL_POISON_CONSUMABLE = ConsumableComponents.food()
             .consumeEffect(new ApplyEffectsConsumeEffect(
                     new StatusEffectInstance(StatusEffects.DARKNESS, 200, 1), 1.0f
@@ -35,11 +36,10 @@ public class ModItems {
             .nutrition(4)
             .saturationModifier(0.3f)
             .build();
-
+   
     public static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Testmod.MOD_ID, name), item);
     }
-
     public static void registerModItems() {
         NEGR = registerItem("cernejzmrd", new Item(new Item.Settings()
                 .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Testmod.MOD_ID, "cernejzmrd")))));
@@ -47,7 +47,15 @@ public class ModItems {
         KAKAL_POISON = registerItem("kakal_poison", new Item(new Item.Settings()
                 .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Testmod.MOD_ID, "kakal_poison")))
                 .food(KAKAL_POISON_FOOD, KAKAL_POISON_CONSUMABLE)));
-
+        NETANYAHU = registerItem("netanyahu", new NetanyahuItem(new Item.Settings()
+                .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Testmod.MOD_ID, "netanyahu")))));
+        TRUMP = registerItem("trump", new TrumpItem(new Item.Settings()
+        		.registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Testmod.MOD_ID,"trump")))));
+        
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
+            entries.add(NETANYAHU);
+            entries.add(TRUMP);
+        });
         Testmod.LOGGER.info("Registered mod items for " + Testmod.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
