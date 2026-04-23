@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_kakal_poison": {
+      "conditions": {
+        "items": [
+          {
+            "items": "test-mod:kakal_poison"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "test-mod:dan_block_from_kakal"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_kakal_poison"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "test-mod:dan_block_from_kakal"
+    ]
+  }
+}

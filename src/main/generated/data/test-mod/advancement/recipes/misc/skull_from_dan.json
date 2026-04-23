@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dan_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "test-mod:dan_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "test-mod:skull_from_dan"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_dan_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "test-mod:skull_from_dan"
+    ]
+  }
+}
